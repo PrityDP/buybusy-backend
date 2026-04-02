@@ -1,0 +1,71 @@
+Requirement- MINI PROJECT BUYBUSY -II
+
+**Objective:
+BuyBusy is a web application for the costomers of an e-commerce business.
+
+**Goal:
+Refactor the E-Commerce site to use Redux Toolkit for global state management and centralized store
+to persist the state.
+
+**Hosted Link: Solution
+https://tangerine-gingersnap-3c8b63.netlify.app/
+
+**Acceptance Criteria:
+1. The app must implement global state management using Redux Toolkit.
+2. The code quality of React app must be of a high standard, with proper documentation of code and 
+   functionality.
+3. There must be no cheating or copy-pasting of code from other sources, and all code must be oroginal
+   and developed specifically for this project.
+
+**Tasks:
+1. Integrate Redux Toolkit for global state management and create centralized store to persist the state.
+2. Create the required reducers and actions for mutating the state.
+3. Create a login page that allows existing users to login into your app.
+4. Create asynchronous thunks for performing asynchronous logic(Login/Signup, Adding/Removing product in 
+    cart etc.)
+5. Utilize extraReducers() to update the state based on the promise returned by asynchronous thunks, which
+   include Pending, Fullfilled.
+6. Update the component of E-Commerce app to use the new Redux Toolkit state management system.
+7. Additionally, you can add the following functionality to the project to maximize your score:
+     1. Create a Sidebar to filter the products based on product price and categories on the HomePage.
+        The search and filter should be applied to the products simultaneously.
+     2. Add and use functions like createSelector() and createEntityAdaptor() for better performance.
+        createSelector() creates memorized selectors, which can cache the result of a calculation and
+        only recompute it if the input data changes. createEntityAdaptor() creates normalized state structure
+        for storing collections of entities.
+
+** Hints:
+1. Use separate slices to manage the user authentication state and product state. For example, the 
+   authentication slice may have actions for handling login success, logout, setting the error message etc.
+2. Use createAsyncThunk() function to work with asynchronous code and API requests.
+3. Create a function that can apply both search and filters at the same time. The function should have 
+   distinct logic for filtering based on category, price range and search terms.
+4. To use the useSelector() hook - define a function to return the state and pass it to useSelector().
+   It automatically subscribes to the store and returns the selector functions result when the store updates.
+   Utilize the returned value to update the UI.
+
+Evaluation Criteria:
+1. Usage of slices, createAsyncThunk() and extraReducers() functions  -              Max-Score:250
+   Usage of the createSlice(), Usage of createAsyncThunk() function to implement asynchronous logic,
+   Usage of extraReducers().
+
+2. Usage of selector functions with useSelector() and useDispatch() hooks.  -        Max-Score:100
+   Products are retrived on app mount by dispatching actions inside of useEffect() hook and selector functions
+   are used to reduce the redundancy inside useSelector() hook.
+
+3. Naming conventions and folder structure -                                        Max-Score:50
+   Naming of variables and functions should match the conventions like suffixing "Slice" while creating slice etc.
+   All the related files must be maintained in the dedicated folders.
+
+4. Code Quality -                                                                  Max-Score:25
+   Clear separations of concerns, with components handling UI and Redux handling state management.
+
+5. Comments and documenetation -                                                   Max-Score:25
+   Solution code is documented and explained with comments along with a Readme.md files
+
+6. Usage of Advanced Hooks, innovative UI and implementation of additional tasks. - Max-Score:50
+   Implementation of Sidebar for filtering of products and Memorizing expensive selectors to reduce the
+   number of recomputations.
+
+   
+Please provide FE and Backend code for above requirement with MongoDB and production ready UI and system
