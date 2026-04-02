@@ -63,7 +63,7 @@ Backend:
 ## Setup Instructions
 
 ### 1. Clone Repository
-git clone https://github.com/your-username/buybusy.git
+git clone https://github.com/PrityDP/buybusy-backend.git
 
 ### 2. Install Dependencies
 Frontend:
