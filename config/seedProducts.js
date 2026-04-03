@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import ProductModel from "../models/productModel.js";
 
 dotenv.config();
-
+// To get initials products on UI load this seedProducts.js file when server starts
 // Define products array
 const products = [
     {
