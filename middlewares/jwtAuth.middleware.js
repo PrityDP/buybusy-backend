@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 export const jwtAuth = (req, res, next) => {
     try {
-        const token = req.cookies.token;  // getting from FROM COOKIE from browser at client side
+        const token = req.cookies.token;  // getting from COOKIE from browser at client side
 
         if (!token) {
             return res.status(401).json({ message: "No token" })
