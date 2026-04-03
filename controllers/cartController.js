@@ -78,7 +78,7 @@ class CartController {
                 return res.status(404).json({ message: "Item not found in cart" });
             }
 
-            // ✅ Update qty OR remove if 0
+            // Update qty OR remove if 0
             if (qty <= 0) {
                 cart.items.splice(itemIndex, 1);
             } else {
