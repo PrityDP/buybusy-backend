@@ -9,7 +9,7 @@ class UserController {
     // Generate token method
     generateToken = (res, user) => {
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-            expiresIn: "7d"
+            expiresIn: "1h"
         });
 
         res.cookie("token", token, {
