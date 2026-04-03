@@ -51,7 +51,7 @@ class CartController {
 
             cart.items = cart.items.filter(item => item.product.toString() !== productId);
             await cart.save();
-
+            await cart.populate("items.product");
             res.json({ message: "Item removed", cart });
         } catch (error) {
             res.status(500).json({ message: "Error removing item", error: error.message });
