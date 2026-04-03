@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
     try {
-        // const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/buybusy";
         await mongoose.connect(process.env.MONGO_URI, {
             // no need to set options for mongoose v6+
             // useNewUrlParser: true,
