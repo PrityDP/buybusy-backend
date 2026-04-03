@@ -13,7 +13,7 @@ userRouter.post("/register", userController.register);
 userRouter.post("/login", userController.login);
 userRouter.post("/logout", userController.logout);
 userRouter.get("/currentUser", jwtAuth, userController.getCurrentUser);
-userRouter.post("/uploadProfilePic", jwtAuth, upload.single("profilePic"), userController.uploadAvatar
+userRouter.post("/uploadProfilePic", jwtAuth, upload.single("profilePic"), userController.uploadProfilePic
 );
 
 export default userRouter;
