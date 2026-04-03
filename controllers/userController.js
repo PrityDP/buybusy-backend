@@ -68,7 +68,7 @@ class UserController {
 
 
     // Upload avatar
-    uploadAvatar = async (req, res) => {
+    uploadProfilePic = async (req, res) => {
         try {
             const user = await UserModel.findById(req.user.id);
 
