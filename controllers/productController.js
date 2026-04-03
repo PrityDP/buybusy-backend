@@ -10,12 +10,13 @@ class ProductController {
             // page - pagination page, limit - items per page
             const { search = "", category, minPrice, maxPrice, page = 1, limit = 10 } = req.query;
 
+            const query = {};
+
             // MongoDB regex: $regex → search pattern  $options: "i" → case-insensitive 
             // Example search = "phone" matches: iPhone, Phone, PHONE
-            const query = { title: { $regex: search, $options: "i" } };
-
-            if (category) {
-                query.category = category;
+            // Apply search ONLY if exists
+            if (search && search.length > 1) {
+                query.title = { $regex: search, $options: "i" };
             }
             if (minPrice || maxPrice) {
                 query.price = {};
