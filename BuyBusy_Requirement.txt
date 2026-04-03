@@ -67,5 +67,3 @@ Evaluation Criteria:
    Implementation of Sidebar for filtering of products and Memorizing expensive selectors to reduce the
    number of recomputations.
 
-   
-Please provide FE and Backend code for above requirement with MongoDB and production ready UI and system
