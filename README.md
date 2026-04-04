@@ -82,10 +82,10 @@ Create `.env` file in backend:
 PORT=your_backend_port_number
 MONGO_URI=your_mongodb_url
 JWT_SECRET=your_secret_key
-CLIENT_URL=http://localhost:5173
+CLIENT_URL=Your Frontned url
 
 Create `.env` file in frontend:
-VITE_API_URL=http://localhost:4000/api 
+VITE_API_URL=your backend url 
 
 ---
 
@@ -122,5 +122,4 @@ npm run dev
 ---
 
 ## Author
-
 Priti Shambharkar
