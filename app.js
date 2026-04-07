@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import cookieParser from "cookie-parser";   // ✅ NEW
+import cookieParser from "cookie-parser";   
 import helmet from "helmet";
 import morgan from "morgan";
 import connectMongooseDB from './config/mongoConfig.js';
@@ -41,14 +41,13 @@ app.use("/api", apiLimiter);
 // Allow cross orogin access CORS (IMPORTANT for cookies)
 app.use(cors({
     origin: process.env.CLIENT_URL,
-    credentials: true   // 🔥 REQUIRED
+    credentials: true 
 }));
 
 // Body parser
 app.use(express.json()); // express.json() = “Convert incoming JSON request data into usable JavaScript object
 // Cookies
-app.use(cookieParser()); // ✅ REQUIRED
-
+app.use(cookieParser()); 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
